@@ -1,6 +1,6 @@
 # Artillery
 자세한 설명은 아래의 글을 참고하세요. <br>
-[https://github.com/hyunjunhwang1994/NodeJS-Artillery](https://blog.hyunjun.kr/artillery-1)
+[https://blog.hyunjun.kr/artillery-1](https://blog.hyunjun.kr/artillery-1)
 
 <br>
 
