@@ -1,0 +1,41 @@
+{
+  "config": {
+    "target": "http://localhost:3000",
+    "phases": [
+      {
+        "duration": 60,
+        "arrivalRate": 50
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "flow": [
+        {
+          "get": {
+            "url": "/",
+            "capture": [
+              {
+                "json": "$.id",
+                "as": "id"
+              },
+              {
+                "json": "$.pw",
+                "as": "pw"
+              }
+            ]
+          }
+        },
+        {
+          "post": {
+            "url": "/auth/login",
+            "json": {
+              "id": "{{ id }}",
+              "pw": "{{ pw }}"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

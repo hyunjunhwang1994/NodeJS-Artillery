@@ -1,11 +1,20 @@
 const express = require("express")
 const app = express()
+app.use(express.json());
 
-let count = 0;
+let checkCount = 0;
 
 app.get("/", (req, res) => {
-  count++;
-  console.log(`부하 테스트 ${count}`)
+  checkCount++;
+  console.log(checkCount)
+  res.json({
+    "id": "testId",
+    "pw": "testPw"
+  })
+})
+
+app.post("/auth/login", (req, res) => {
+  console.log(req.body)
   res.send("")
 })
 
